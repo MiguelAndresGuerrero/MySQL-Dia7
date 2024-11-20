@@ -837,4 +837,79 @@ DELIMITER ;
 
 call Modelo_Vehiculo_Nuevo(3, 2025);
 
--- 3. Procedimiento: 
+-- 3. Procedimiento: Insertar clientes nuevos
+
+DELIMITER //
+
+create procedure Cliente_Nuevo (
+	in cedula int,
+    in nombre varchar(30),
+    in apellido varchar(30),
+    in direccion varchar(60),
+    in ciudad_residencia varchar(30),
+    in celular varchar(10),
+    in correo_electronico varchar(100)
+)
+begin 
+	insert into clientes (cedula, nombre, apellido, direccion, ciudad_residencia, celular, correo_electronico)
+    values (cedula, nombre, apellido, direccion, ciudad_residencia, celular, correo_electronico);
+
+END;
+
+// DELIMITER ;
+
+call cliente_nuevo ('100000101', 'Pepito', 'Perez', 'Calle 2 #3-12', 'Cucutá', '30000000101', 'Pepitoperez101@gmail.com');
+
+-- 4. Procedimiento: Insertar nuevos empleados
+
+ DELIMITER //
+
+create procedure empleado_Nuevo (
+	in cedula int,
+    in nombre varchar(30),
+    in apellido varchar(30),
+    in direccion varchar(60),
+    in ciudad_residencia varchar(30),
+    in celular varchar(10),
+    in correo_electronico varchar(100)
+)
+begin 
+	insert into empleados (cedula, nombre, apellido, direccion, ciudad_residencia, celular, correo_electronico)
+    values (cedula, nombre, apellido, direccion, ciudad_residencia, celular, correo_electronico);
+
+END;
+
+// DELIMITER ;
+
+call empleado_nuevo ('100000101', 'Juanito', 'Perez', 'Calle 2 #3-12', 'Bogotá', '30000000101', 'Juanitoperez101@gmail.com');
+
+-- 5. Procedimiento: Insertar sucursales nuevas
+
+ DELIMITER //
+
+create procedure sucursal_Nueva (
+	in ciudad varchar(30),
+    in direccion varchar(60),
+    in telefono_fijo varchar(20),
+    in celular varchar(20),
+    in correo_electronico varchar(100)
+)
+begin 
+	insert into sucursal (ciudad, direccion, telefono_fijo, celular, correo_electronico)
+    values (ciudad, direccion, telefono_fijo, celular, correo_electronico);
+
+END;
+
+// DELIMITER ;
+
+call sucursal_nueva ('Cucutá', 'Calle 2# 2-98', '072-5501000', '30001000', 'sucursalCucutá@gmail.com');
+
+-- 6. Procedimiento: Actualizar vehiculo
+
+DELIMITER //
+
+create procedure actualizar_vehiculo (
+	
+)
+
+// DELIMITER ;
