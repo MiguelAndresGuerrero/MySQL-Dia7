@@ -13,11 +13,10 @@ Antes de ejecutar el proyecto, asegúrese de contar con:
 
 Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local:  
 
-1. **Clonar el repositorio:**  
+1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/MiguelAndresGuerrero/MySQL-Dia7.git
+   git clone https://github.com/MiguelAndresGuerrero/CorreccionExamen2.git
 
-   
 ## 🤝 Contribuciones
 ### Si deseas contribuir:
 
